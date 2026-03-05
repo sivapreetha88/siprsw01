@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+  --color-ayur-cream: #F1F8E9; /* Light green-cream */
+  --color-ayur-olive: #2E7D32; /* Forest green */
+  --color-ayur-gold: #827717; /* Olive gold */
+  --color-ayur-ink: #1B5E20; /* Deep forest green */
+}
+
+@layer base {
+  * {
+    font-weight: bold !important;
+  }
+  body {
+    @apply bg-ayur-cream text-ayur-ink font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.markdown-body {
+  @apply font-sans leading-relaxed;
+}
+
+.markdown-body p {
+  @apply mb-4;
+}
+
+.markdown-body h3 {
+  @apply text-xl mb-2 mt-4;
+}
+
+.markdown-body ul {
+  @apply list-disc pl-5 mb-4;
+}
